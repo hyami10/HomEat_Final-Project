@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Use relative path from this CSS file (public/css) to public/assets */
+  background-image: url("../assets/f16e770fecd4547b318a48272f571aa4.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Baloo 2", sans-serif;
+  min-height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 644px;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      #ffffff40 100%);
+  backdrop-filter: blur(25px);
+  border-radius: 120px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  padding: 60px 70px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.login-container {
+  width: 380px;
+  padding: 40px 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.login-container h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.login-container p.subtitle {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.login-container label {
+  font-size: 13px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: rgba(217, 217, 217, 1);
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.login-container input::placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #9ca3af !important;
+}
+
+.login-container input::-webkit-input-placeholder {
+  color: #9ca3af !important;
+  -webkit-text-fill-color: #9ca3af !important;
+}
+
+.login-container input::-moz-placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+/* Autofill styles - keep text black, placeholder gray */
+.login-container input:-webkit-autofill,
+.login-container input:-webkit-autofill:hover,
+.login-container input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.login-container input:-webkit-autofill::placeholder {
+  -webkit-text-fill-color: #9ca3af !important;
+}
+
+/* Override for description paragraphs */
+.login-container p {
+  color: #374151 !important;
+  /* Tailwind gray-700 */
+}
+
+.login-container p.subtitle {
+  color: #333;
+}
+
+.login-container .forgot {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.login-container .forgot a {
+  color: rgba(179, 7, 7, 0.59);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, rgb(179, 7, 7, 0.59), rgb(179, 7, 7, 0.59));
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  opacity: 0.9;
+}
+
+.login-container .signup {
+  text-align: center;
+  font-size: 13px;
+  color: #000;
+}
+
+.login-container .signup a {
+  color: #B30707;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.login-container .remember-me {
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.login-container .remember-me label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.login-container .remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid rgba(179, 7, 7, 0.59);
+  border-radius: 4px;
+  background: rgba(217, 217, 217, 1);
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.login-container .remember-me input[type="checkbox"]:hover {
+  border-color: rgba(179, 7, 7, 0.8);
+  background: rgba(240, 240, 240, 1);
+}
+
+.login-container .remember-me input[type="checkbox"]:checked {
+  background: rgba(179, 7, 7, 0.59);
+  border-color: rgba(179, 7, 7, 0.59);
+}
+
+.login-container .remember-me input[type="checkbox"]:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
